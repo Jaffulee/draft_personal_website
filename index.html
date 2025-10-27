@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name — Professional Profile</title>
+  <meta name="description" content="Professional profile of Your Name: skills, work, projects, and contact details." />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Optional: add a favicon -->
+  <!-- <link rel="icon" href="favicon.ico" /> -->
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="branding">
+        <h1 class="site-title">Your Name</h1>
+        <p class="site-tagline">Job Title • Specialty • City</p>
+      </div>
+      <nav class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#coffee">Buy me a coffee</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <!-- Add your resume link if you have one -->
+          <!-- <li><a href="YourName_Resume.pdf">Résumé</a></li> -->
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <img class="avatar" src="https://via.placeholder.com/160" alt="Headshot of Your Name" />
+        <div class="hero-copy">
+          <h2>Hi, I’m Your Name.</h2>
+          <p>
+            One-line value proposition about what you do and who you help.
+            Keep it short and focused.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#projects">See my work</a>
+            <a class="btn" href="#coffee">Buy me a coffee ☕</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <h3 class="section-title">About</h3>
+        <p>
+          Brief bio (3–5 sentences). Mention your niche, typical outcomes, and a hint of personality.
+        </p>
+        <ul class="tags" aria-label="Skills">
+          <li>Python</li>
+          <li>Data Consulting</li>
+          <li>dbt</li>
+          <li>Snowflake</li>
+          <li>SQL</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <div class="container">
+        <h3 class="section-title">Experience</h3>
+
+        <article class="card">
+          <header class="card-head">
+            <h4>Role — Company</h4>
+            <span class="meta">Jan 2023 — Present · London, UK</span>
+          </header>
+          <ul class="list">
+            <li>Impact statement or quantified achievement.</li>
+            <li>Another highlight (ideally with numbers).</li>
+            <li>Tech/skills used.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <header class="card-head">
+            <h4>Earlier Role — Company</h4>
+            <span class="meta">2020 — 2022 · Remote</span>
+          </header>
+          <ul class="list">
+            <li>Key accomplishment.</li>
+            <li>What you owned or improved.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h3 class="section-title">Projects</h3>
+
+        <div class="grid">
+          <article class="card">
+            <header class="card-head">
+              <h4>Project Title</h4>
+              <span class="meta">Python, dbt, Snowflake</span>
+            </header>
+            <p>One-paragraph overview of the problem, your approach, and results.</p>
+            <div class="actions">
+              <a class="btn" href="#" aria-label="View project live">Live</a>
+              <a class="btn" href="#" aria-label="View project source">Source</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <header class="card-head">
+              <h4>Another Project</h4>
+              <span class="meta">SQL, Data Viz</span>
+            </header>
+            <p>Short description focusing on outcomes and what you learned.</p>
+            <div class="actions">
+              <a class="btn" href="#">Case Study</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- BUY ME A COFFEE -->
+    <section id="coffee" class="section accent">
+      <div class="container">
+        <h3 class="section-title">Buy me a coffee</h3>
+        <p>
+          Enjoyed my work or found something helpful? You can support me here—thank you!
+        </p>
+
+        <!-- OPTION A: Buy Me A Coffee -->
+        <!-- Replace "yourname" with your profile slug -->
+        <a class="btn primary big"
+           href="https://www.buymeacoffee.com/yourname"
+           target="_blank" rel="noopener">
+          ☕ Buy me a coffee
+        </a>
+
+        <!-- OPTION B: Ko-fi (swap the link above if you prefer) -->
+        <!-- <a class="btn primary big" href="https://ko-fi.com/yourname" target="_blank" rel="noopener">☕ Support on Ko-fi</a> -->
+
+        <!-- OPTIONAL: Add a note about how funds help -->
+        <p class="fineprint">
+          Your support helps me dedicate time to open-source, tutorials, and pro bono work.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h3 class="section-title">Contact</h3>
+        <p>
+          Best way to reach me: <a href="mailto:you@example.com">you@example.com</a>
+          <!-- You can add more links: -->
+          • <a href="https://www.linkedin.com/in/yourname" target="_blank" rel="noopener">LinkedIn</a>
+          • <a href="https://github.com/yourname" target="_blank" rel="noopener">GitHub</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Your Name. All rights reserved.</p>
+      <a href="#top" class="back-to-top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <!-- Tiny, optional JS just to update the year; safe to remove if you prefer pure HTML/CSS -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
