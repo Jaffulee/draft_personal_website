@@ -1,13 +1,21 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" id="top">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Your Name — Professional Profile</title>
-  <meta name="description" content="Professional profile of Your Name: skills, work, projects, and contact details." />
+  <meta name="description" content="Professional profile of Your Name: skills, projects, writing, music, and contact details." />
   <link rel="stylesheet" href="styles.css" />
-  <!-- Optional: add a favicon -->
+
+  <!-- Optional: favicon -->
   <!-- <link rel="icon" href="favicon.ico" /> -->
+
+  <!-- Optional: social preview (replace content) -->
+  <!--
+  <meta property="og:title" content="Your Name — Professional Profile" />
+  <meta property="og:description" content="What you do in one short line." />
+  <meta property="og:image" content="https://example.com/preview.png" />
+  -->
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -18,14 +26,19 @@
         <h1 class="site-title">Your Name</h1>
         <p class="site-tagline">Job Title • Specialty • City</p>
       </div>
+
       <nav class="site-nav" aria-label="Primary">
         <ul>
           <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#writing">Writing</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#hobbies">Hobbies</a></li>
           <li><a href="#coffee">Buy me a coffee</a></li>
           <li><a href="#contact">Contact</a></li>
-          <!-- Add your resume link if you have one -->
+
+          <!-- Optional: add résumé link -->
           <!-- <li><a href="YourName_Resume.pdf">Résumé</a></li> -->
         </ul>
       </nav>
@@ -36,16 +49,40 @@
     <!-- HERO -->
     <section class="hero">
       <div class="container hero-inner">
-        <img class="avatar" src="https://via.placeholder.com/160" alt="Headshot of Your Name" />
+        <!-- Avatar with fallback initials:
+             - Replace the src with your image URL
+             - If the image fails, initials appear automatically
+        -->
+        <div class="avatar-wrap" aria-label="Profile photo">
+          <img
+            class="avatar"
+            src="https://via.placeholder.com/400"
+            alt="Headshot of Your Name"
+            loading="lazy"
+            decoding="async"
+            referrerpolicy="no-referrer"
+            onerror="this.style.display='none'; this.parentElement.classList.add('fallback');"
+          />
+          <div class="avatar-fallback" aria-hidden="true">YN</div>
+        </div>
+
         <div class="hero-copy">
-          <h2>Hi, I’m Your Name.</h2>
-          <p>
-            One-line value proposition about what you do and who you help.
-            Keep it short and focused.
+          <h2>One strong line about what you do and who you help.</h2>
+
+          <p class="hero-links">
+            <a href="https://github.com/yourname" target="_blank" rel="noopener">GitHub</a>
+            <span aria-hidden="true">·</span>
+            <a href="https://www.linkedin.com/in/yourname" target="_blank" rel="noopener">LinkedIn</a>
+            <span aria-hidden="true">·</span>
+            <a href="https://yourblog.example" target="_blank" rel="noopener">Blog</a>
           </p>
+
           <div class="hero-actions">
             <a class="btn primary" href="#projects">See my work</a>
             <a class="btn" href="#coffee">Buy me a coffee ☕</a>
+
+            <!-- Optional: add a contact CTA -->
+            <!-- <a class="btn" href="#contact">Get in touch</a> -->
           </div>
         </div>
       </div>
@@ -56,45 +93,76 @@
       <div class="container">
         <h3 class="section-title">About</h3>
         <p>
-          Brief bio (3–5 sentences). Mention your niche, typical outcomes, and a hint of personality.
+          Brief bio (3–6 sentences). Mention your niche, typical outcomes, and what you care about.
+          Keep this readable and human.
         </p>
-        <ul class="tags" aria-label="Skills">
+
+        <!-- Optional: add academic background / credentials -->
+        <!--
+        <p><strong>Academic:</strong> MSc / BSc / Certifications etc.</p>
+        -->
+
+        <ul class="tags" aria-label="Highlights">
           <li>Python</li>
-          <li>Data Consulting</li>
+          <li>SQL</li>
           <li>dbt</li>
           <li>Snowflake</li>
-          <li>SQL</li>
+          <li>Tableau</li>
+          <li>Power BI</li>
         </ul>
       </div>
     </section>
 
-    <!-- EXPERIENCE -->
-    <section id="experience" class="section">
+    <!-- SKILLS -->
+    <section id="skills" class="section">
       <div class="container">
-        <h3 class="section-title">Experience</h3>
+        <h3 class="section-title">Skills & Tools</h3>
 
-        <article class="card">
-          <header class="card-head">
-            <h4>Role — Company</h4>
-            <span class="meta">Jan 2023 — Present · London, UK</span>
-          </header>
-          <ul class="list">
-            <li>Impact statement or quantified achievement.</li>
-            <li>Another highlight (ideally with numbers).</li>
-            <li>Tech/skills used.</li>
-          </ul>
-        </article>
+        <div class="grid">
+          <article class="card">
+            <header class="card-head">
+              <h4>Programming & Data</h4>
+            </header>
+            <ul class="list">
+              <li>Python, SQL</li>
+              <li>Data modelling and transformation</li>
+              <li>Statistics / experimentation</li>
+            </ul>
+          </article>
 
-        <article class="card">
-          <header class="card-head">
-            <h4>Earlier Role — Company</h4>
-            <span class="meta">2020 — 2022 · Remote</span>
-          </header>
-          <ul class="list">
-            <li>Key accomplishment.</li>
-            <li>What you owned or improved.</li>
-          </ul>
-        </article>
+          <article class="card">
+            <header class="card-head">
+              <h4>Data Engineering</h4>
+            </header>
+            <ul class="list">
+              <li>Automated pipelines</li>
+              <li>Medallion / layered architectures</li>
+              <li>CDC / incremental processing</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <header class="card-head">
+              <h4>Platforms & Analytics</h4>
+            </header>
+            <ul class="list">
+              <li>Snowflake, dbt</li>
+              <li>Tableau, Power BI</li>
+              <li>Alteryx (optional)</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <header class="card-head">
+              <h4>Cloud & Tooling</h4>
+            </header>
+            <ul class="list">
+              <li>AWS / GCP / Azure (choose what fits)</li>
+              <li>GitHub, Docker</li>
+              <li>CI/CD (optional)</li>
+            </ul>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -107,28 +175,180 @@
           <article class="card">
             <header class="card-head">
               <h4>Project Title</h4>
-              <span class="meta">Python, dbt, Snowflake</span>
+              <span class="meta">Python • SQL • dbt</span>
             </header>
-            <p>One-paragraph overview of the problem, your approach, and results.</p>
+            <p>
+              A short description of the problem, your approach, and the outcome.
+              Aim for 2–4 lines.
+            </p>
             <div class="actions">
-              <a class="btn" href="#" aria-label="View project live">Live</a>
-              <a class="btn" href="#" aria-label="View project source">Source</a>
+              <a class="btn" href="#" target="_blank" rel="noopener">Repository</a>
+              <!-- Optional: live demo/case study -->
+              <!-- <a class="btn" href="#" target="_blank" rel="noopener">Live</a> -->
+              <!-- <a class="btn" href="#" target="_blank" rel="noopener">Case Study</a> -->
             </div>
           </article>
 
           <article class="card">
             <header class="card-head">
               <h4>Another Project</h4>
-              <span class="meta">SQL, Data Viz</span>
+              <span class="meta">Data Viz • Analytics</span>
             </header>
-            <p>Short description focusing on outcomes and what you learned.</p>
+            <p>
+              Highlight one key detail (speed, quality, learning, or business impact).
+            </p>
             <div class="actions">
-              <a class="btn" href="#">Case Study</a>
+              <a class="btn" href="#" target="_blank" rel="noopener">Repository</a>
             </div>
+          </article>
+
+          <!-- Optional: add more project cards -->
+          <!--
+          <article class="card">
+            <header class="card-head">
+              <h4>Third Project</h4>
+              <span class="meta">Tooling</span>
+            </header>
+            <p>Short description.</p>
+            <div class="actions">
+              <a class="btn" href="#">Source</a>
+            </div>
+          </article>
+          -->
+        </div>
+      </div>
+    </section>
+
+    <!-- WRITING -->
+    <section id="writing" class="section">
+      <div class="container">
+        <h3 class="section-title">Writing</h3>
+        <p>
+          Share a sentence on what you write about (tutorials, data, career notes, etc.).
+        </p>
+
+        <article class="card">
+          <header class="card-head">
+            <h4>Latest writing</h4>
+            <span class="meta">Optional</span>
+          </header>
+          <ul class="list">
+            <li><a href="#" target="_blank" rel="noopener">Post title #1</a> — one-line summary</li>
+            <li><a href="#" target="_blank" rel="noopener">Post title #2</a> — one-line summary</li>
+            <li><a href="#" target="_blank" rel="noopener">Post title #3</a> — one-line summary</li>
+          </ul>
+
+          <div class="actions">
+            <a class="btn" href="#" target="_blank" rel="noopener">Visit blog</a>
+          </div>
+        </article>
+
+        <!-- Optional: academic/research card -->
+        <!--
+        <article class="card">
+          <header class="card-head">
+            <h4>Research</h4>
+            <span class="meta">Paper / thesis / talk</span>
+          </header>
+          <p>One sentence describing what it is.</p>
+          <div class="actions">
+            <a class="btn" href="#" target="_blank" rel="noopener">Read</a>
+          </div>
+        </article>
+        -->
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <div class="container">
+        <h3 class="section-title">Experience</h3>
+
+        <article class="card">
+          <header class="card-head">
+            <h4>Role — Company</h4>
+            <span class="meta">Jan 2023 — Present · City, Country</span>
+          </header>
+          <ul class="list">
+            <li>Impact statement or quantified achievement.</li>
+            <li>What you owned or improved.</li>
+            <li>Tech/tools used.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <header class="card-head">
+            <h4>Earlier Role — Company</h4>
+            <span class="meta">2020 — 2022 · Remote</span>
+          </header>
+          <ul class="list">
+            <li>Key accomplishment.</li>
+            <li>Another highlight.</li>
+          </ul>
+        </article>
+
+        <!-- Optional: certifications -->
+        <!--
+        <article class="card">
+          <header class="card-head">
+            <h4>Certifications</h4>
+            <span class="meta">Optional</span>
+          </header>
+          <ul class="list">
+            <li>Certification name</li>
+            <li>Certification name</li>
+          </ul>
+        </article>
+        -->
+      </div>
+    </section>
+
+    <!-- HOBBIES / ACTIVITIES -->
+    <section id="hobbies" class="section">
+      <div class="container">
+        <h3 class="section-title">Hobbies & Activities</h3>
+
+        <div class="grid">
+          <article class="card">
+            <header class="card-head">
+              <h4>Outside of work</h4>
+              <span class="meta">A few things I enjoy</span>
+            </header>
+
+            <p>
+              A short sentence about what you do outside work. Keep it light and optional.
+            </p>
+
+            <ul class="list">
+              <li>🎯 Activity or hobby #1</li>
+              <li>📚 Activity or hobby #2</li>
+              <li>🏃 Activity or hobby #3</li>
+            </ul>
+
+            <!-- Optional: add links to profiles related to hobbies -->
+            <!--
+            <div class="actions">
+              <a class="btn" href="#" target="_blank" rel="noopener">Link #1</a>
+              <a class="btn" href="#" target="_blank" rel="noopener">Link #2</a>
+            </div>
+            -->
+          </article>
+
+          <article class="card">
+            <header class="card-head">
+              <h4>Fun facts</h4>
+              <span class="meta">Optional</span>
+            </header>
+            <ul class="list">
+              <li>Short fun fact (one line).</li>
+              <li>Another fun fact (one line).</li>
+              <li>Something you’re currently learning or enjoying.</li>
+            </ul>
           </article>
         </div>
       </div>
     </section>
+
 
     <!-- BUY ME A COFFEE -->
     <section id="coffee" class="section accent">
@@ -138,20 +358,15 @@
           Enjoyed my work or found something helpful? You can support me here—thank you!
         </p>
 
-        <!-- OPTION A: Buy Me A Coffee -->
-        <!-- Replace "yourname" with your profile slug -->
+        <!-- Replace "yourname" with your Buy Me a Coffee slug -->
         <a class="btn primary big"
-           href="https://www.buymeacoffee.com/yourname"
+           href="https://buymeacoffee.com/yourname"
            target="_blank" rel="noopener">
           ☕ Buy me a coffee
         </a>
 
-        <!-- OPTION B: Ko-fi (swap the link above if you prefer) -->
-        <!-- <a class="btn primary big" href="https://ko-fi.com/yourname" target="_blank" rel="noopener">☕ Support on Ko-fi</a> -->
-
-        <!-- OPTIONAL: Add a note about how funds help -->
         <p class="fineprint">
-          Your support helps me dedicate time to open-source, tutorials, and pro bono work.
+          Your support helps me dedicate time to open-source, writing, and learning.
         </p>
       </div>
     </section>
@@ -161,11 +376,14 @@
       <div class="container">
         <h3 class="section-title">Contact</h3>
         <p>
-          Best way to reach me: <a href="mailto:you@example.com">you@example.com</a>
-          <!-- You can add more links: -->
+          Best way to reach me:
+          <a href="mailto:you@example.com">you@example.com</a>
           • <a href="https://www.linkedin.com/in/yourname" target="_blank" rel="noopener">LinkedIn</a>
           • <a href="https://github.com/yourname" target="_blank" rel="noopener">GitHub</a>
         </p>
+
+        <!-- Optional: add a short availability note -->
+        <!-- <p class="meta">Available for freelance/contract work from Month YYYY.</p> -->
       </div>
     </section>
   </main>
@@ -177,7 +395,7 @@
     </div>
   </footer>
 
-  <!-- Tiny, optional JS just to update the year; safe to remove if you prefer pure HTML/CSS -->
+  <!-- Tiny, optional JS just to update the year -->
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
