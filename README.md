@@ -27,7 +27,7 @@ https://jaffulee.github.io/Jaffulee/
 ## How to use this template in practice
 
 1. **Fork or clone this repository**
-2. Enable **GitHub Pages** (Settings → Pages → Deploy from branch)
+2. Enable **GitHub Pages** (Settings → Pages → Deploy from branch, requires a public repository)
 3. Edit `index.html` and `styles.css` to suit your details
 
 ### Fast way to fill it out (recommended)

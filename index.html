@@ -46,72 +46,74 @@
   </header>
 
   <main id="main">
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container hero-inner">
-        <!-- Avatar with fallback initials:
-             - Replace the src with your image URL
-             - If the image fails, initials appear automatically
-        -->
-        <div class="avatar-wrap" aria-label="Profile photo">
-          <img
-            class="avatar"
-            src="https://via.placeholder.com/400"
-            alt="Headshot of Your Name"
-            loading="lazy"
-            decoding="async"
-            referrerpolicy="no-referrer"
-            onerror="this.style.display='none'; this.parentElement.classList.add('fallback');"
-          />
-          <div class="avatar-fallback" aria-hidden="true">YN</div>
-        </div>
+    <!-- HERO + ABOUT wrapped -->
+    <section class="hero-about">
+      <!-- HERO -->
+      <section class="hero">
+        <div class="container hero-inner">
+          <!-- Avatar with fallback initials:
+               - Replace the src with your image URL
+               - If the image fails, initials appear automatically
+          -->
+          <div class="avatar-wrap" aria-label="Profile photo">
+            <img
+              class="avatar"
+              src="https://via.placeholder.com/400"
+              alt="Headshot of Your Name"
+              loading="lazy"
+              decoding="async"
+              referrerpolicy="no-referrer"
+              onerror="this.style.display='none'; this.parentElement.classList.add('fallback');"
+            />
+            <div class="avatar-fallback" aria-hidden="true">YN</div>
+          </div>
 
-        <div class="hero-copy">
-          <h2>One strong line about what you do and who you help.</h2>
+          <div class="hero-copy">
+            <h2>One strong line about what you do and who you help.</h2>
 
-          <p class="hero-links">
-            <a href="https://github.com/yourname" target="_blank" rel="noopener">GitHub</a>
-            <span aria-hidden="true">·</span>
-            <a href="https://www.linkedin.com/in/yourname" target="_blank" rel="noopener">LinkedIn</a>
-            <span aria-hidden="true">·</span>
-            <a href="https://yourblog.example" target="_blank" rel="noopener">Blog</a>
-          </p>
+            <div class="hero-links" aria-label="Profile links">
+              <a href="https://github.com/yourname" target="_blank" rel="noopener">GitHub</a>
+              <a href="https://www.linkedin.com/in/yourname" target="_blank" rel="noopener">LinkedIn</a>
+              <a href="https://yourblog.example" target="_blank" rel="noopener">Blog</a>
+            </div>
 
-          <div class="hero-actions">
-            <a class="btn primary" href="#projects">See my work</a>
-            <a class="btn" href="#coffee">Buy me a coffee ☕</a>
+            <div class="hero-actions">
+              <a class="btn primary" href="#projects">See my work</a>
+              <a class="btn" href="#coffee">Buy me a coffee ☕</a>
 
-            <!-- Optional: add a contact CTA -->
-            <!-- <a class="btn" href="#contact">Get in touch</a> -->
+              <!-- Optional: add a contact CTA -->
+              <!-- <a class="btn" href="#contact">Get in touch</a> -->
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="section about-merged">
+        <div class="container">
+          <h3 class="section-title">About</h3>
+          <p>
+            Brief bio (3–6 sentences). Mention your niche, typical outcomes, and what you care about.
+            Keep this readable and human.
+          </p>
+
+          <!-- Optional: add academic background / credentials -->
+          <!--
+          <p><strong>Academic:</strong> MSc / BSc / Certifications etc.</p>
+          -->
+
+          <ul class="tags" aria-label="Highlights">
+            <li>Python</li>
+            <li>SQL</li>
+            <li>dbt</li>
+            <li>Snowflake</li>
+            <li>Tableau</li>
+            <li>Power BI</li>
+          </ul>
+        </div>
+      </section>
     </section>
 
-    <!-- ABOUT -->
-    <section id="about" class="section">
-      <div class="container">
-        <h3 class="section-title">About</h3>
-        <p>
-          Brief bio (3–6 sentences). Mention your niche, typical outcomes, and what you care about.
-          Keep this readable and human.
-        </p>
-
-        <!-- Optional: add academic background / credentials -->
-        <!--
-        <p><strong>Academic:</strong> MSc / BSc / Certifications etc.</p>
-        -->
-
-        <ul class="tags" aria-label="Highlights">
-          <li>Python</li>
-          <li>SQL</li>
-          <li>dbt</li>
-          <li>Snowflake</li>
-          <li>Tableau</li>
-          <li>Power BI</li>
-        </ul>
-      </div>
-    </section>
 
     <!-- SKILLS -->
     <section id="skills" class="section">

@@ -22,12 +22,14 @@ html, body { height: 100%; }
 body {
   margin: 0;
   font-family: var(--font);
-  background: linear-gradient(180deg, var(--bg), #0f1117 40%);
+  /* Solid base colour so the gradient doesn't stretch over the whole page */
+  background: #0f1117;
   color: var(--text);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
+
 
 img { max-width: 100%; height: auto; display: block; border-radius: calc(var(--radius) * 1.2); }
 a { color: var(--brand); text-decoration: none; }
@@ -73,19 +75,110 @@ a:hover { text-decoration: underline; }
 .site-nav a:focus-visible { outline: 3px solid var(--brand-ink); outline-offset: 2px; }
 
 /* Hero */
+
+/* Per-section gradient background
+   Each section fades from lighter at the top to darker at the bottom.
+   Hero/About are handled specially via .hero-about below. */
+.hero,
+.section {
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    var(--bg) 0%,
+    #0f1117 100%
+  );
+}
+
+/* Optional: subtle separator line between stacked sections */
+.hero + .section,
+.section + .section {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Unified Hero + About block */
+.hero-about {
+  background: linear-gradient(180deg, var(--bg), #0f1117 100%);
+  padding-bottom: 2rem;
+}
+.hero-about .hero {
+  padding-top: 3rem; /* adjust to taste */
+}
+
+/* Inside hero-about, let the parent gradient show through */
+.hero-about .hero,
+.hero-about .about-merged {
+  background: none;
+}
+
+/* Remove border line between hero and about when inside hero-about */
+.hero-about .hero + .about-merged {
+  border-top: 0;
+}
+
+/* Remove top padding on About to visually merge with hero */
+.about-merged {
+  padding-top: 0 !important;
+}
+
+/* Slight spacing before the About heading when merged */
+.about-merged .section-title {
+  margin-top: 1.5rem;
+}
+
+/* Hero */
 .hero { padding: 4.5rem 0 3.5rem; }
 .hero-inner {
-  display: grid; grid-template-columns: 160px 1fr; gap: 2rem; align-items: center;
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 2rem;
+  align-items: center;
 }
 
 .hero-copy h2 {
   margin: 0 0 .6rem;
   font-size: clamp(1.6rem, 1.4vw + 1.2rem, 2.2rem);
 }
-.hero-copy p { margin: 0; color: var(--muted); max-width: 70ch; }
-.hero-links { margin-top: .25rem; }
-.hero-links span { color: rgba(255,255,255,.25); padding: 0 .35rem; }
-.hero-actions { display: flex; gap: .75rem; margin-top: 1.1rem; flex-wrap: wrap; }
+.hero-copy p {
+  margin: 0;
+  color: var(--muted);
+  max-width: 70ch;
+}
+
+/* New hero links layout */
+.hero-links {
+  margin-top: .25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+  margin: .5rem 0 0;
+}
+
+.hero-links a {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+/* Add separators automatically, without weird line-wrap behaviour */
+.hero-links a:not(:last-child)::after {
+  content: "•";
+  margin-left: .75rem;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+/* Kept for compatibility if someone still uses spans */
+.hero-links span {
+  color: rgba(255,255,255,.25);
+  padding: 0 .35rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: .75rem;
+  margin-top: 1.1rem;
+  flex-wrap: wrap;
+}
 
 /* Avatar + fallback initials */
 .avatar-wrap{
