@@ -23,7 +23,7 @@ https://jaffulee.github.io/Jaffulee/
 
 ## How To Use
 
-1. Fork or clone this repository.
+1. Fork (if you want to contribute) or clone this repository via clicking the plus at the top right and then clicking `Import Repository`.
 2. Edit `index.html` with your own name, links, projects, and writing.
 3. Adjust the visual tokens at the top of `styles.css`.
 4. Remove sections you do not need.
