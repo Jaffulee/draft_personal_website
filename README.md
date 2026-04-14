@@ -1,66 +1,85 @@
 # Draft Personal Website Portfolio
 
-This repository contains a **clean, minimal personal portfolio website template**, designed to be easy to customise and deploy using **GitHub Pages**.
+A static personal portfolio template for developers, analysts, consultants, students, and technical creators.
 
----
+The site is based on a completed personal portfolio, but the public template uses placeholder content so it can be cloned and adapted quickly.
 
 ## Live Demo
 
-**Draft website portfolio**  
+Template demo:  
 https://jaffulee.github.io/draft_personal_website/
 
-**Example usage (completed version)**  
+Completed example:  
 https://jaffulee.github.io/Jaffulee/
 
----
+## What This Includes
 
-## What this is
+- A single-page portfolio built with plain HTML and CSS
+- A profile hero with image fallback initials
+- About, skills, selected projects, engineering portfolio, tutorials, writing, experience, outside-work, support, and contact sections
+- Optional featured video embed for a project demo
+- Responsive layout suitable for GitHub Pages
+- No build step, package manager, or JavaScript framework
 
-- A simple, professional personal website template
-- Mobile-friendly and easy to read
-- Pure HTML + CSS (no build step)
-- Designed for developers, analysts, and consultants
-- Suitable for hosting directly on GitHub Pages
+## How To Use
 
----
+1. Fork or clone this repository.
+2. Edit `index.html` with your own name, links, projects, and writing.
+3. Adjust the visual tokens at the top of `styles.css`.
+4. Remove sections you do not need.
+5. Enable GitHub Pages from repository settings.
 
-## How to use this template in practice
+For GitHub Pages, use:
 
-1. **Fork or clone this repository**
-2. Enable **GitHub Pages** (Settings → Pages → Deploy from branch, requires a public repository)
-3. Edit `index.html` and `styles.css` to suit your details
+- Source: `Deploy from a branch`
+- Branch: `main`
+- Folder: `/root`
 
-### Fast way to fill it out (recommended)
+Your site will usually publish at:
 
-A quick way to customise the site is to:
-- Paste your CV, bio, or LinkedIn profile into an AI tool (e.g. ChatGPT)
-- Ask it to:
-  - Rewrite your experience for a personal website
-  - Populate each section of the template
-  - Keep the tone concise and professional
+```text
+https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/
+```
 
-You can then copy the generated text directly into the HTML sections.
+## Recommended Customisation Order
 
-This approach is especially useful if you:
-- Don’t enjoy writing about yourself
-- Want a fast first draft
-- Plan to refine wording later
+1. Replace the page title, meta description, name, tagline, avatar, and profile links.
+2. Rewrite the About section in your own voice.
+3. Replace the skills tags and skills cards.
+4. Add three strong project cards before adding many smaller ones.
+5. Use the Engineering Portfolio section only if you have connected repositories or a workflow worth explaining.
+6. Add tutorials, writing, research, or educational material if those are part of your public work.
+7. Remove the Support section if you do not use a support link.
 
----
+## Using AI To Fill The Template
 
-## Customisation tips
+A fast way to customise the site is to paste your CV, LinkedIn profile, project READMEs, or short bio into an AI tool and ask it to:
 
-- Change colours and spacing using the CSS variables at the top of `styles.css`
-- Add or remove sections by copying existing `<section>` blocks
-- Replace the avatar image or rely on the initials fallback
-- Keep content short — the layout is designed for scannability
+- Rewrite your background for a personal portfolio
+- Populate each section of `index.html`
+- Keep the tone concise and specific
+- Avoid private client details
+- Produce short project summaries with clear outcomes
 
----
+Then review the generated text manually and replace anything that sounds generic.
+
+## Project Structure
+
+```text
+.
++-- index.html
++-- styles.css
++-- README.md
+```
+
+## Customisation Tips
+
+- Keep each project card short enough to scan quickly.
+- Link to repositories, demos, videos, write-ups, or case studies where possible.
+- Use the featured video block for a strong visual demo, or remove it entirely.
+- Keep private work high-level and focus public detail on projects you can share.
+- Change colours, spacing, width, and typography from the CSS variables in `:root`.
 
 ## License
 
 Free to use, modify, and adapt for personal projects.
-
----
-
-If you build something from this template, feel free to credit or link back — and enjoy!

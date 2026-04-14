@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Your Name — Professional Profile</title>
-  <meta name="description" content="Professional profile of Your Name: skills, projects, writing, music, and contact details." />
+  <title>Your Name &mdash; Your Professional Focus</title>
+  <meta name="description" content="Portfolio of Your Name: public projects, writing, tutorials, experience highlights, and contact details." />
   <link rel="stylesheet" href="styles.css" />
 
   <!-- Optional: favicon -->
   <!-- <link rel="icon" href="favicon.ico" /> -->
 
-  <!-- Optional: social preview (replace content) -->
+  <!-- Optional: social preview -->
   <!--
-  <meta property="og:title" content="Your Name — Professional Profile" />
-  <meta property="og:description" content="What you do in one short line." />
+  <meta property="og:title" content="Your Name &mdash; Your Professional Focus" />
+  <meta property="og:description" content="One concise sentence about what you do." />
   <meta property="og:image" content="https://example.com/preview.png" />
   -->
 </head>
@@ -24,7 +24,7 @@
     <div class="container header-inner">
       <div class="branding">
         <h1 class="site-title">Your Name</h1>
-        <p class="site-tagline">Job Title • Specialty • City</p>
+        <p class="site-tagline">Role / Specialty &bull; Location</p>
       </div>
 
       <nav class="site-nav" aria-label="Primary">
@@ -32,29 +32,22 @@
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#engineering">Engineering</a></li>
+          <li><a href="#tutorials">Tutorials</a></li>
           <li><a href="#writing">Writing</a></li>
           <li><a href="#experience">Experience</a></li>
-          <li><a href="#hobbies">Hobbies</a></li>
-          <li><a href="#coffee">Buy me a coffee</a></li>
+          <li><a href="#outside">Outside</a></li>
+          <li><a href="#support">Support</a></li>
           <li><a href="#contact">Contact</a></li>
-
-          <!-- Optional: add résumé link -->
-          <!-- <li><a href="YourName_Resume.pdf">Résumé</a></li> -->
         </ul>
       </nav>
     </div>
   </header>
 
   <main id="main">
-    <!-- HERO + ABOUT wrapped -->
     <section class="hero-about">
-      <!-- HERO -->
-      <section class="hero">
+      <section class="hero" aria-labelledby="intro-title">
         <div class="container hero-inner">
-          <!-- Avatar with fallback initials:
-               - Replace the src with your image URL
-               - If the image fails, initials appear automatically
-          -->
           <div class="avatar-wrap" aria-label="Profile photo">
             <img
               class="avatar"
@@ -69,335 +62,444 @@
           </div>
 
           <div class="hero-copy">
-            <h2>One strong line about what you do and who you help.</h2>
+            <h2 id="intro-title">Build a clear, trusted portfolio around the work you want to be known for.</h2>
 
-            <div class="hero-links" aria-label="Profile links">
-              <a href="https://github.com/yourname" target="_blank" rel="noopener">GitHub</a>
-              <a href="https://www.linkedin.com/in/yourname" target="_blank" rel="noopener">LinkedIn</a>
-              <a href="https://yourblog.example" target="_blank" rel="noopener">Blog</a>
-            </div>
+            <ul class="hero-links" aria-label="Profile links">
+              <li><a href="https://github.com/yourname" target="_blank" rel="noopener">GitHub</a></li>
+              <li><a href="https://www.linkedin.com/in/yourname" target="_blank" rel="noopener">LinkedIn</a></li>
+              <li><a href="https://yourblog.example" target="_blank" rel="noopener">Blog</a></li>
+            </ul>
 
             <div class="hero-actions">
               <a class="btn primary" href="#projects">See my work</a>
-              <a class="btn" href="#coffee">Buy me a coffee ☕</a>
-
-              <!-- Optional: add a contact CTA -->
-              <!-- <a class="btn" href="#contact">Get in touch</a> -->
+              <a class="btn" href="#contact">Get in touch</a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- ABOUT -->
       <section id="about" class="section about-merged">
         <div class="container">
-          <h3 class="section-title">About</h3>
+          <h3 class="section-title">About Me</h3>
           <p>
-            Brief bio (3–6 sentences). Mention your niche, typical outcomes, and what you care about.
-            Keep this readable and human.
+            Introduce yourself in three or four sentences. Explain your background, the type of work you do, and the problems you like solving.
+            Keep this section human and specific rather than trying to list everything from your CV.
           </p>
-
-          <!-- Optional: add academic background / credentials -->
-          <!--
-          <p><strong>Academic:</strong> MSc / BSc / Certifications etc.</p>
-          -->
+          <p>
+            Add a short note on your education, career path, or point of view. This template works well when the site is positioned as a portfolio
+            of public projects, writing, and learning resources rather than a full CV.
+          </p>
 
           <ul class="tags" aria-label="Highlights">
             <li>Python</li>
             <li>SQL</li>
-            <li>dbt</li>
-            <li>Snowflake</li>
-            <li>Tableau</li>
-            <li>Power BI</li>
+            <li>Data Engineering</li>
+            <li>Analytics</li>
+            <li>Documentation</li>
+            <li>Teaching</li>
           </ul>
         </div>
       </section>
     </section>
 
-
-    <!-- SKILLS -->
     <section id="skills" class="section">
       <div class="container">
-        <h3 class="section-title">Skills & Tools</h3>
+        <h3 class="section-title">Skills &amp; Tools</h3>
 
         <div class="grid">
           <article class="card">
             <header class="card-head">
-              <h4>Programming & Data</h4>
+              <h4>Programming &amp; Data</h4>
             </header>
             <ul class="list">
-              <li>Python, SQL</li>
-              <li>Data modelling and transformation</li>
-              <li>Statistics / experimentation</li>
+              <li>Languages, notebooks, and analysis tools you use regularly.</li>
+              <li>Data modelling, transformation, statistics, or experimentation.</li>
+              <li>Clear code, reproducible work, and useful documentation.</li>
             </ul>
           </article>
 
           <article class="card">
             <header class="card-head">
-              <h4>Data Engineering</h4>
+              <h4>Engineering</h4>
             </header>
             <ul class="list">
-              <li>Automated pipelines</li>
-              <li>Medallion / layered architectures</li>
-              <li>CDC / incremental processing</li>
+              <li>Automated pipelines, APIs, scheduling, or cloud storage.</li>
+              <li>Layered architectures such as raw, modelled, and reporting data.</li>
+              <li>Testing, monitoring, reliability, and handover practices.</li>
             </ul>
           </article>
 
           <article class="card">
             <header class="card-head">
-              <h4>Platforms & Analytics</h4>
+              <h4>Platforms &amp; Analytics</h4>
             </header>
             <ul class="list">
-              <li>Snowflake, dbt</li>
-              <li>Tableau, Power BI</li>
-              <li>Alteryx (optional)</li>
+              <li>Warehouses, BI tools, transformation frameworks, or dashboards.</li>
+              <li>Stakeholder reporting and self-serve analytics.</li>
+              <li>Clear explanations for technical and non-technical audiences.</li>
             </ul>
           </article>
 
           <article class="card">
             <header class="card-head">
-              <h4>Cloud & Tooling</h4>
+              <h4>Ways of Working</h4>
             </header>
             <ul class="list">
-              <li>AWS / GCP / Azure (choose what fits)</li>
-              <li>GitHub, Docker</li>
-              <li>CI/CD (optional)</li>
+              <li>GitHub, issue tracking, reviews, and reusable project templates.</li>
+              <li>Client-facing delivery, teaching, mentoring, or collaboration.</li>
+              <li>Replace this card with whatever best describes your practice.</li>
             </ul>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- PROJECTS -->
     <section id="projects" class="section">
       <div class="container">
-        <h3 class="section-title">Projects</h3>
+        <h3 class="section-title">Selected Projects</h3>
+
+        <div class="project-video">
+          <div class="video-placeholder">
+            <p>Featured project demo</p>
+            <span>Replace this panel with a video embed, screenshot, or live demo link.</span>
+          </div>
+
+          <!-- Optional YouTube embed:
+          <div class="video-embed">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/VIDEO_ID?rel=0&amp;modestbranding=1&amp;iv_load_policy=3"
+              title="Featured project demo"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+          -->
+
+          <p class="video-caption">
+            Optional featured demo. Replace this block, or remove it if you do not need a video.
+          </p>
+        </div>
 
         <div class="grid">
           <article class="card">
             <header class="card-head">
               <h4>Project Title</h4>
-              <span class="meta">Python • SQL • dbt</span>
+              <span class="meta">Python &bull; SQL &bull; Analytics</span>
             </header>
             <p>
-              A short description of the problem, your approach, and the outcome.
-              Aim for 2–4 lines.
+              Describe the problem, the approach, and the outcome in two or three sentences. Focus on what someone can understand quickly.
             </p>
+            <ul class="list">
+              <li>One concrete technical or product detail.</li>
+              <li>One result, learning, or reason this project matters.</li>
+            </ul>
             <div class="actions">
               <a class="btn" href="#" target="_blank" rel="noopener">Repository</a>
-              <!-- Optional: live demo/case study -->
-              <!-- <a class="btn" href="#" target="_blank" rel="noopener">Live</a> -->
-              <!-- <a class="btn" href="#" target="_blank" rel="noopener">Case Study</a> -->
+              <a class="btn" href="#" target="_blank" rel="noopener">Demo</a>
             </div>
           </article>
 
           <article class="card">
             <header class="card-head">
-              <h4>Another Project</h4>
-              <span class="meta">Data Viz • Analytics</span>
+              <h4>Second Project</h4>
+              <span class="meta">Computer Vision &bull; Modelling</span>
             </header>
             <p>
-              Highlight one key detail (speed, quality, learning, or business impact).
+              Use the project cards for public work, learning projects, case studies, or polished examples that represent your interests.
             </p>
+            <ul class="list">
+              <li>Replace generic bullets with specific implementation details.</li>
+              <li>Link to a README, live demo, video, or article where possible.</li>
+            </ul>
             <div class="actions">
               <a class="btn" href="#" target="_blank" rel="noopener">Repository</a>
             </div>
           </article>
 
-          <!-- Optional: add more project cards -->
-          <!--
           <article class="card">
             <header class="card-head">
               <h4>Third Project</h4>
-              <span class="meta">Tooling</span>
+              <span class="meta">Tooling &bull; Documentation</span>
             </header>
-            <p>Short description.</p>
+            <p>
+              A concise card is often better than a long description. Give readers enough context to decide whether to click through.
+            </p>
+            <ul class="list">
+              <li>What you built.</li>
+              <li>What it demonstrates.</li>
+            </ul>
             <div class="actions">
-              <a class="btn" href="#">Source</a>
+              <a class="btn" href="#" target="_blank" rel="noopener">Repository</a>
             </div>
           </article>
-          -->
         </div>
       </div>
     </section>
 
-    <!-- WRITING -->
-    <section id="writing" class="section">
+    <section id="engineering" class="section">
       <div class="container">
-        <h3 class="section-title">Writing</h3>
-        <p>
-          Share a sentence on what you write about (tutorials, data, career notes, etc.).
+        <h3 class="section-title">Engineering Portfolio</h3>
+        <p class="section-intro">
+          Use this section for connected projects that tell a bigger story: extraction, transformation, documentation, reporting, or deployment.
+          It is useful when several repositories form one end-to-end workflow.
         </p>
 
         <article class="card">
           <header class="card-head">
-            <h4>Latest writing</h4>
-            <span class="meta">Optional</span>
+            <h4>How these projects connect</h4>
+            <span class="meta">Raw &rarr; Modelled &rarr; Trusted output</span>
           </header>
           <ul class="list">
-            <li><a href="#" target="_blank" rel="noopener">Post title #1</a> — one-line summary</li>
-            <li><a href="#" target="_blank" rel="noopener">Post title #2</a> — one-line summary</li>
-            <li><a href="#" target="_blank" rel="noopener">Post title #3</a> — one-line summary</li>
+            <li><strong>Raw ingestion:</strong> API, files, scraping, sensors, or other source data.</li>
+            <li><strong>Transformation:</strong> modelling, cleaning, testing, documentation, and reusable business logic.</li>
+            <li><strong>Outputs:</strong> dashboards, datasets, reports, apps, or downstream analytics.</li>
           </ul>
-
-          <div class="actions">
-            <a class="btn" href="#" target="_blank" rel="noopener">Visit blog</a>
-          </div>
+          <p class="meta data-flow-tip">
+            Tip: link the final analytics layer first, then link upstream repositories so readers can follow the flow.
+          </p>
         </article>
 
-        <!-- Optional: academic/research card -->
-        <!--
-        <article class="card">
-          <header class="card-head">
-            <h4>Research</h4>
-            <span class="meta">Paper / thesis / talk</span>
-          </header>
-          <p>One sentence describing what it is.</p>
-          <div class="actions">
-            <a class="btn" href="#" target="_blank" rel="noopener">Read</a>
-          </div>
-        </article>
-        -->
+        <div class="grid data-project-grid">
+          <article class="card">
+            <header class="card-head">
+              <h4>Analytics Layer</h4>
+              <span class="meta">Transformations &bull; Tests &bull; Docs</span>
+            </header>
+            <p>Describe the modelled layer, the business questions it supports, and the quality checks that make it trustworthy.</p>
+            <div class="actions">
+              <a class="btn" href="#" target="_blank" rel="noopener">Repository</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <header class="card-head">
+              <h4>Source Extraction</h4>
+              <span class="meta">API &bull; JSON &bull; Storage</span>
+            </header>
+            <p>Describe how raw data is collected, stored, retried, logged, or prepared for downstream modelling.</p>
+            <div class="actions">
+              <a class="btn" href="#" target="_blank" rel="noopener">Repository</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <header class="card-head">
+              <h4>Reporting Output</h4>
+              <span class="meta">BI &bull; Dashboard &bull; Insight</span>
+            </header>
+            <p>Link to a dashboard, notebook, report, or write-up that makes the project understandable to a wider audience.</p>
+            <div class="actions">
+              <a class="btn" href="#" target="_blank" rel="noopener">Case study</a>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
-    <!-- EXPERIENCE -->
+    <section id="tutorials" class="section">
+      <div class="container">
+        <h3 class="section-title">Tutorials and Follow-Alongs</h3>
+        <p class="section-intro">
+          Add starter repositories, guides, templates, or write-ups that someone else can clone, run, and adapt.
+        </p>
+
+        <div class="grid">
+          <article class="card">
+            <header class="card-head">
+              <h4>Getting Started Guide</h4>
+              <span class="meta">Setup &bull; Tools &bull; Workflow</span>
+            </header>
+            <p>A practical guide for setting up a toolchain, environment, or repeatable workflow.</p>
+            <div class="actions">
+              <a class="btn" href="#" target="_blank" rel="noopener">Repository</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <header class="card-head">
+              <h4>API Template</h4>
+              <span class="meta">Python &bull; Environment variables</span>
+            </header>
+            <p>A small template that shows how to call an API, keep secrets out of source control, and structure an example project.</p>
+            <div class="actions">
+              <a class="btn" href="#" target="_blank" rel="noopener">Repository</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <header class="card-head">
+              <h4>Reusable Website Template</h4>
+              <span class="meta">HTML/CSS &bull; GitHub Pages</span>
+            </header>
+            <p>A static template or starter project that others can fork and customise for their own work.</p>
+            <div class="actions">
+              <a class="btn" href="#" target="_blank" rel="noopener">Repository</a>
+              <a class="btn" href="#" target="_blank" rel="noopener">Live demo</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="writing" class="section">
+      <div class="container">
+        <h3 class="section-title">Writing &amp; Knowledge Sharing</h3>
+
+        <div class="grid">
+          <article class="card">
+            <header class="card-head">
+              <h4>Technical Writing</h4>
+              <span class="meta">Blog posts &bull; Practical insight</span>
+            </header>
+            <p>Summarise the topics you write about and the kind of reader you write for.</p>
+            <ul class="list">
+              <li>Topic or theme #1.</li>
+              <li>Topic or theme #2.</li>
+              <li>Topic or theme #3.</li>
+            </ul>
+            <div class="actions">
+              <a class="btn" href="#" target="_blank" rel="noopener">Read the blog</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <header class="card-head">
+              <h4>Research or Essays</h4>
+              <span class="meta">Academic &bull; Long-form</span>
+            </header>
+            <p>Use this card for a thesis, paper, essay, conference talk, or long-form technical explanation.</p>
+            <div class="actions">
+              <a class="btn" href="#" target="_blank" rel="noopener">Read more</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <header class="card-head">
+              <h4>Educational Materials</h4>
+              <span class="meta">Teaching &bull; Notes</span>
+            </header>
+            <p>Link to learning materials, workshops, tutoring notes, or examples you have made public.</p>
+            <div class="actions">
+              <a class="btn" href="#" target="_blank" rel="noopener">View materials</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section id="experience" class="section">
       <div class="container">
-        <h3 class="section-title">Experience</h3>
+        <h3 class="section-title">Experience Highlights</h3>
 
         <article class="card">
           <header class="card-head">
-            <h4>Role — Company</h4>
-            <span class="meta">Jan 2023 — Present · City, Country</span>
+            <h4>Current or Recent Focus</h4>
+            <span class="meta">Delivery &bull; Projects &bull; Impact</span>
           </header>
           <ul class="list">
-            <li>Impact statement or quantified achievement.</li>
-            <li>What you owned or improved.</li>
-            <li>Tech/tools used.</li>
+            <li>Summarise the kind of work you deliver.</li>
+            <li>Include impact, ownership, or tools where you can be specific.</li>
+            <li>Keep client-sensitive or private work general.</li>
           </ul>
         </article>
 
         <article class="card">
           <header class="card-head">
-            <h4>Earlier Role — Company</h4>
-            <span class="meta">2020 — 2022 · Remote</span>
+            <h4>Teaching, Communication, or Leadership</h4>
+            <span class="meta">Stakeholders &bull; Mentoring &bull; Documentation</span>
           </header>
           <ul class="list">
-            <li>Key accomplishment.</li>
-            <li>Another highlight.</li>
+            <li>Explain how you help other people understand, use, or maintain your work.</li>
+            <li>Mention tutoring, mentoring, stakeholder work, talks, or documentation.</li>
           </ul>
         </article>
 
-        <!-- Optional: certifications -->
-        <!--
         <article class="card">
           <header class="card-head">
             <h4>Certifications</h4>
             <span class="meta">Optional</span>
           </header>
           <ul class="list">
-            <li>Certification name</li>
-            <li>Certification name</li>
+            <li>Certification or qualification #1.</li>
+            <li>Certification or qualification #2.</li>
           </ul>
         </article>
-        -->
       </div>
     </section>
 
-    <!-- HOBBIES / ACTIVITIES -->
-    <section id="hobbies" class="section">
+    <section id="outside" class="section">
       <div class="container">
-        <h3 class="section-title">Hobbies & Activities</h3>
+        <h3 class="section-title">Outside the Office</h3>
 
         <div class="grid">
           <article class="card">
             <header class="card-head">
-              <h4>Outside of work</h4>
-              <span class="meta">A few things I enjoy</span>
+              <h4>Creative Work</h4>
+              <span class="meta">Music &bull; Art &bull; Writing</span>
             </header>
-
-            <p>
-              A short sentence about what you do outside work. Keep it light and optional.
-            </p>
-
-            <ul class="list">
-              <li>🎯 Activity or hobby #1</li>
-              <li>📚 Activity or hobby #2</li>
-              <li>🏃 Activity or hobby #3</li>
-            </ul>
-
-            <!-- Optional: add links to profiles related to hobbies -->
-            <!--
+            <p>Share one optional, human detail beyond your main professional work.</p>
             <div class="actions">
               <a class="btn" href="#" target="_blank" rel="noopener">Link #1</a>
               <a class="btn" href="#" target="_blank" rel="noopener">Link #2</a>
             </div>
-            -->
           </article>
 
           <article class="card">
             <header class="card-head">
-              <h4>Fun facts</h4>
+              <h4>Interests</h4>
               <span class="meta">Optional</span>
             </header>
             <ul class="list">
-              <li>Short fun fact (one line).</li>
-              <li>Another fun fact (one line).</li>
-              <li>Something you’re currently learning or enjoying.</li>
+              <li>Something you enjoy learning.</li>
+              <li>A hobby, community, or side project.</li>
+              <li>A short note that makes the page feel like you.</li>
             </ul>
           </article>
         </div>
       </div>
     </section>
 
-
-    <!-- BUY ME A COFFEE -->
-    <section id="coffee" class="section accent">
+    <section id="support" class="section accent">
       <div class="container">
-        <h3 class="section-title">Buy me a coffee</h3>
+        <h3 class="section-title">Support</h3>
         <p>
-          Enjoyed my work or found something helpful? You can support me here—thank you!
+          If your work is public and useful to others, you can include an optional support link here.
         </p>
 
-        <!-- Replace "yourname" with your Buy Me a Coffee slug -->
         <a class="btn primary big"
            href="https://buymeacoffee.com/yourname"
            target="_blank" rel="noopener">
-          ☕ Buy me a coffee
+          Buy me a coffee
         </a>
 
         <p class="fineprint">
-          Your support helps me dedicate time to open-source, writing, and learning.
+          Remove this section if support links are not relevant to your portfolio.
         </p>
       </div>
     </section>
 
-    <!-- CONTACT -->
     <section id="contact" class="section">
       <div class="container">
         <h3 class="section-title">Contact</h3>
         <p>
-          Best way to reach me:
-          <a href="mailto:you@example.com">you@example.com</a>
-          • <a href="https://www.linkedin.com/in/yourname" target="_blank" rel="noopener">LinkedIn</a>
-          • <a href="https://github.com/yourname" target="_blank" rel="noopener">GitHub</a>
+          Reach me via:
+          <a href="mailto:you@example.com">Email</a>
+          &bull; <a href="https://www.linkedin.com/in/yourname" target="_blank" rel="noopener">LinkedIn</a>
+          &bull; <a href="https://github.com/yourname" target="_blank" rel="noopener">GitHub</a>
+          &bull; <a href="https://yourblog.example" target="_blank" rel="noopener">Blog</a>
         </p>
-
-        <!-- Optional: add a short availability note -->
-        <!-- <p class="meta">Available for freelance/contract work from Month YYYY.</p> -->
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© <span id="year"></span> Your Name. All rights reserved.</p>
-      <a href="#top" class="back-to-top">Back to top ↑</a>
+      <p>&copy; <span id="year"></span> Your Name. All rights reserved.</p>
+      <a href="#top" class="back-to-top">Back to top &uarr;</a>
     </div>
   </footer>
 
-  <!-- Tiny, optional JS just to update the year -->
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
